@@ -23,9 +23,19 @@
             </table>
         </section>
         <section>
-            <!-- add later after the review schema is implemented-->
-            <!-- <h2>Reviews</h2>
-            <form action="/songs/<%= song._id %> -->
+            <h2>Reviews</h2>
+            <form action="/songs/<%= song._id %>/comments" method="POST">
+                <label>
+                    Comments:
+                    <textarea name="title" cols="30" rows="10" required></textarea>
+                </label> 
+                <input type="submit" value="Add Comment">
+            </form>
+            <% song.comments.forEach(s => { %>
+                <tr>
+                    <td><%= s.title %></td> 
+                </tr>
+            <% }) %>
         </section>  
         <%- include('../partials/footer') %>  
 </body>
