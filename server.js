@@ -1,6 +1,8 @@
 // Load express
 const express = require('express');
 const logger = require('morgan');
+const indexRoutes = require('./routes/index');
+const { index } = require('./controllers');
 
 // create our express app
 const app = express();
@@ -19,6 +21,7 @@ app.use(express.static('public'));
 app.use(express.urlencoded({extended: false}));     // this creates req.body from an HTML form submission
 
 //mount routes
+app.use('/', indexRoutes);
 
 //Listen on port 3000 for HTTP request from clients
 app.listen(3000, () => {
