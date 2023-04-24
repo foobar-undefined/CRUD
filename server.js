@@ -3,6 +3,7 @@ const express = require('express');
 const logger = require('morgan');
 const indexRoutes = require('./routes/index');
 const songRoutes = require('./routes/songs');
+const commentsRoutes = require('./routes/comments');
 
 // create our express app
 const app = express();
@@ -23,6 +24,7 @@ app.use(express.urlencoded({extended: false}));     // this creates req.body fro
 //mount routes
 app.use('/', indexRoutes);
 app.use('/songs', songRoutes);
+app.use('/', commentsRoutes);
 
 //Listen on port 3000 for HTTP request from clients
 app.listen(3000, () => {
