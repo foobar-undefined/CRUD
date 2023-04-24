@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../partials/head') %>
+    <body>
+        <%- include('../partials/header') %>
+        <section>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Song</th>
+                        <th>Artist</th>
+                        <th>Genre</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% songs.forEach(s => { %>
+                    <tr>
+                        <td>
+                            <%= s.song %>
+                        </td>
+                        <td>
+                            <%= s.artist %>
+                        </td>
+                        <td>
+                            <%= s.genre %>
+                        </td>
+                        <td>
+                            <a href = "/songs/<%= s._id %>">Reviews</a>
+                        </td>
+                    </tr>
+                    <% }); %>
+                    
+                </tbody>
+            </table>
+        </section>
+
+        <%- include('../partials/footer') %>
+</body>
+</html>

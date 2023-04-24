@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../partials/head') %>
+    <body>
+        <%- include('../partials/header') %>
+
+        <section>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Song</th>
+                        <th>Artist</th>
+                        <th>Genre</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><%= song.song %></td>
+                        <td><%= song.artist %></td>
+                        <td><%= song.genre %></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <%- include('../partials/footer') %>  
+</body>
+</html>

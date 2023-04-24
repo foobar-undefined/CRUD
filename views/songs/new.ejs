@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../partials/head') %>
+    <%- include('../partials/header') %>
+<h2>Project 2</h2>
+    <form action = "/songs" method="POST">
+        <label> Song:
+            <input type="string" name="song">
+        </label>
+        <label> Artist:
+            <input type="string" name="artist">
+        </label>
+        <label> Genre:
+            <select name = "genre">
+                <option value= "pop">POP</option>
+                <option value= "rock">ROCK</option>
+                <option value= "edm">EDM</option>
+                <option value= "hip-hop">HIP HOP</option>
+                <option value= "rap">RAP</option>
+            </select>
+        </label>
+        <button type="submit">Add Song</button>
+    </form>
+<body>
+    <%- include('../partials/footer') %>
+</body>
+</html>
