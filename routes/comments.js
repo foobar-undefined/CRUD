@@ -1,10 +1,11 @@
 const express = require('express');
 const router = express.Router();
+const ensureLoggedIn = require('../config/ensureLoggedIn')
 
 const commentsController = require('../controllers/comments');
 
-router.post('/songs/:id/comments', commentsController.create);
+router.post('/songs/:id/comments', ensureLoggedIn, commentsController.create);
 
-router.delete('/comments', commentsController.delete);
+router.delete('/songs/:id/comments', ensureLoggedIn, commentsController.delete);
 
 module.exports = router;
