@@ -14,11 +14,8 @@ const app = express();
 app.set('view engine', 'ejs');
 
 
-
-
 //expose environment variables
 require('dotenv').config();
-
 
 // require an execute database config code
 require('./config/database');
