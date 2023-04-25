@@ -24,7 +24,7 @@
             </table>
         </section>
         <section>
-            <h3>Reviews</h3>
+            <h3>Comments</h3>
             <% if (user) { %>
             <form action="/songs/<%= song._id %>/comments" method="POST">
                 <label>
@@ -35,14 +35,15 @@
             </form>
             <% } %>
             <% song.comments.forEach(s => { %>
-                <td class="comment-user"><img alt="avatar" src="<%= s.userAvatar %> referrerpolicy="no-referrer" ><%= s.userName %></td>
+                <td class="comment-user"><img alt="avatar" src="<%= s.userAvatar %>" referrerpolicy="no-referrer"><%= s.userName %></td>
                 <tr>
                     <td><%= s.title %></td> 
                     <td>
                         <% if (user?._id.equals(s.user)) { %>
-                            <form action="/song/<%= s._id %>/comments?_method=DELETE" method="POST">
+                            <form action="/songs/<%= s._id %>/comments?_method=DELETE" method="POST">
+                                
                                 <button type="submit">X</button>
-                              </form>
+                            </form>
                         <% } %>
                     </td>
                 </tr>
