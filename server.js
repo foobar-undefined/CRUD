@@ -13,9 +13,7 @@ const app = express();
 //app settings (app.set)
 app.set('view engine', 'ejs');
 
-//configure passport
-//require('./config/database');
-require('./config/passport');
+
 
 
 //expose environment variables
@@ -24,6 +22,9 @@ require('dotenv').config();
 
 // require an execute database config code
 require('./config/database');
+//configure passport
+require('./config/passport');
+
 
 //mount middleware (app.use)
 app.use(logger('dev'));

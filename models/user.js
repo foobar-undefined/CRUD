@@ -2,19 +2,20 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const userSchema = new Schema({
-    userName:{
+    name:{type: String},
+    googleID:{
         type: String, 
-        require: true,
-        unique: true
-    }, password:{type: String,         
-        require: true,
-        unique: true
+        require: true
     }, 
+    email: {type: String},         
+    avatar: {type: String} ,
     songAdded: [{
         type: Schema.Types.ObjectId,
         ref: 'Song'
     }],
-}, {timestamps: true});
+}, {
+    timestamps: true
+});
 
 module.exports = mongoose.model('User', userSchema);
 
