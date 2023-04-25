@@ -1,16 +1,57 @@
+header {
+    color: black;
+    font-size: 8vmin;
+    font-family: cursive;
+    letter-spacing: 1vmin;
+    background-color: aqua;
+    text-align: center;
+}
+
+h1 {
+    color: black;
+    font-size: 8vmin;
+    font-family: sans-serif;
+    background-color: rgb(103, 38, 38);
+    text-align: center;
+}
+
+/* h2 {
+    color: maroon;
+    font-size: 4vmin;
+    font-family: sans-serif;
+    background-color: lightgray;
+    text-align: center;
+} */
+
+/* h3 {
+    color: maroon;
+    font-size: 4vmin;
+    font-family: sans-serif;
+    background-color: lightgray;
+    text-align: center;
+} */
+
+/* h4 {
+    color: maroon;
+    font-size: 8vmin;
+    font-family: sans-serif;
+    background-color: lightgray;
+    text-align: center;
+} */
+
 body {
     background-color: rgb(63, 213, 158);
+    font-size: 2vmin;
     justify-content: center;
     align-items: center;
-    display: flex;
-    flex-direction: column;
- }
+
+}
 
  button {
-    margin-top: 6vmin;
-    font-size: 3vmin;
+    margin-top: 3vmin;
+    font-size: 2vmin;
     border: 0.06vmin solid black;
-    border-radius: 3vmin;
+    border-radius: 5vmin;
     padding: 2.2vmin;
     color: black;
 }
@@ -18,4 +59,14 @@ body {
 button:hover {
     background-color: black;
     color: white;
+}
+
+footer {
+    font-size: 2.5vmin;
+    text-align: center;
+    display: flex;
+    padding-left: 50vmin;
+    padding-right: 50vmin;
+    padding-top: 5vmin;
+    padding-bottom: 3vmin;
 }
