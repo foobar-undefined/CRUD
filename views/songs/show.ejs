@@ -38,6 +38,13 @@
                 <td class="comment-user"><img alt="avatar" src="<%= s.userAvatar %> referrerpolicy="no-referrer" ><%= s.userName %></td>
                 <tr>
                     <td><%= s.title %></td> 
+                    <td>
+                        <% if (user?._id.equals(s.user)) { %>
+                            <form action="/reviews/<%= s._id %>?_method=DELETE" method="POST">
+                                <button type="submit">X</button>
+                              </form>
+                        <% } %>
+                    </td>
                 </tr>
             <% }) %>
         </section>  

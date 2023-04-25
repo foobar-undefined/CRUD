@@ -19,10 +19,11 @@ async function create(req, res) {
 
 async function deleteComment(req, res) {
     try {
-        const deleteComment = await Comment.findById(req.params.id);
-        deleteComment.comments.remove(req.body);
-        await deleteComment.save()
-        res.redirect(`/comments/${deleteComment._id}`);
+        const song = await Song.findOne({ 'comments._id': req.params.id, 'comments.user': req.user._id });
+        if (!song) return res.redirect('/songs');
+        song.comments.remove(req.body);
+        await song.save()
+        res.redirect(`/comments/${song._id}`);
 
     } catch (error) {
         console.log(error);
