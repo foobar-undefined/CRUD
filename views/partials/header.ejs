@@ -1,7 +1,12 @@
 <header>
     <h1>Songs project</h1>
     <nav>
-        <a href="/songs/new">New Song</a>
-        <a href="/songs">All Songs</a>
-    </nav>
+        <a href="/songs" <%- title === 'All Songs' ? 'class="active"' : ''%>>All Songs</a>
+        <% if (user) { %>
+            <a href="/songs/new"<%- title === 'Add Songs' ? 'class="active"' : ''%>>Add Songs</a>
+            <a href="/logout">LOG OUT</a>
+        <% } else { %>
+            <a href="/auth/google" class="login">LOG IN&nbsp;<img src="<https://i.imgur.com/FHjYyi0.png>"></a>
+        <% } %>
+        </nav>
 </header>

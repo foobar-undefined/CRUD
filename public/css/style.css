@@ -71,3 +71,15 @@ footer {
     padding-top: 35vmin;
     padding-bottom: 5vmin;
 }
+
+.login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 34px;
+  }
+  
+  .login img {
+    height: 30px;
+  }
+  
