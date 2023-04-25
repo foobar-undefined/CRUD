@@ -4,7 +4,8 @@ const Schema = mongoose.Schema;
 const commentSchema = new Schema({
     title: { type: String, required: true},
     Like: { type: Boolean, defualt: false},
-    dislike: { type: Boolean, default: false}
+    dislike: { type: Boolean, default: false},
+    user: { type: Schema.Types.ObjectId, ref: "User", require: true},
    
 }, { timestamps: true });
 
