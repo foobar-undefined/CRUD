@@ -26,6 +26,10 @@ app.use('/', indexRoutes);
 app.use('/songs', songRoutes);
 app.use('/', commentsRoutes);
 
+app.use('*', (req, res) => {
+    res.render('404', {title: '404 - Page Not Found'})
+});
+
 //Listen on port 3000 for HTTP request from clients
 app.listen(3000, () => {
     console.log('Listening on port 3000');
