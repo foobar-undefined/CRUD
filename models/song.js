@@ -6,6 +6,8 @@ const commentSchema = new Schema({
     Like: { type: Boolean, defualt: false},
     dislike: { type: Boolean, default: false},
     user: { type: Schema.Types.ObjectId, ref: "User", require: true},
+    userName: {type: String},
+    userAvatar: {type: String},
    
 }, { timestamps: true });
 

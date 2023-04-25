@@ -3,6 +3,7 @@ const express = require('express');
 const logger = require('morgan');
 const session = require('express-session');
 const passport = require('passport');
+const methodOverride = require('method-override');
 const indexRoutes = require('./routes/index');
 const songRoutes = require('./routes/songs');
 const commentsRoutes = require('./routes/comments');
@@ -29,6 +30,7 @@ app.use(express.static('public'));
 app.use(express.urlencoded({extended: false}));     // this creates req.body from an HTML form submission
 //use of resave & saveUninitialized settings
 //app.use(cookieParser());
+app.use(methodOverride('_method'));
 
 
 app.use(session({
