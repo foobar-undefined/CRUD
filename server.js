@@ -2,6 +2,7 @@
 const express = require('express');
 const logger = require('morgan');
 const session = require('express-session');
+const passport = require('passport');
 const indexRoutes = require('./routes/index');
 const songRoutes = require('./routes/songs');
 const commentsRoutes = require('./routes/comments');
@@ -12,8 +13,15 @@ const app = express();
 //app settings (app.set)
 app.set('view engine', 'ejs');
 
+//configure passport
+//require('./config/database');
+require('./config/passport');
+
+
 //expose environment variables
 require('dotenv').config();
+
+
 // require an execute database config code
 require('./config/database');
 
@@ -30,6 +38,10 @@ app.use(session({
     resave: false,
     saveUninitialized: true
 }));
+//mount passport
+app.use(passport.initialize());
+app.use(passport.session());
+
 
 
 //mount routes
