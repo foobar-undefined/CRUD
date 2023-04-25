@@ -13,6 +13,20 @@ async function create(req, res) {
     }
 }
 
+async function deleteComment(req, res) {
+    try {
+        const deleteComment = await Comment.findById(req.params.id);
+        deleteComment.comments.remove(req.body);
+        await deleteComment.save()
+        res.redirect(`/comments/${deleteComment._id}`);
+
+    } catch (error) {
+        console.log(error);
+        res.render('error', {title: 'Uh O! Something went wrong'});
+    }
+}
+
 module.exports = {
-    create
+    create,
+    delete: deleteComment
 };
