@@ -1,5 +1,6 @@
 const Song = require("../models/song");
 
+
 function newSong(req, res){
     res.render("songs/new",{
         title: "Enter you're favorite Song!"
@@ -46,7 +47,6 @@ async function show(req, res){
             title: "Crap hit the fan"});
     }
 }
-
 
 module.exports = {
     new: newSong,
