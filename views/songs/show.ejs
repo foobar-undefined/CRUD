@@ -40,7 +40,8 @@
                     <td><%= s.title %></td> 
                     <td>
                         <% if (user?._id.equals(s.user)) { %>
-                            <form action="/comments/<%= s._id %>?_method=DELETE" method="POST">
+                            <form action="/songs/<%= s._id %>/comments?_method=DELETE" method="POST">
+                                
                                 <button type="submit">X</button>
                             </form>
                         <% } %>

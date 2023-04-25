@@ -10,7 +10,7 @@ async function create(req, res) {
         foundSong.comments.push(req.body);
         await foundSong.save()
         res.redirect(`/songs/${foundSong._id}`);
-
+        console.log('im here')
     } catch (error) {
         console.log(error);
         res.render('error', {title: 'Uh, O! Something happened'});
@@ -19,6 +19,7 @@ async function create(req, res) {
 
 async function deleteComment(req, res) {
     try {
+        console.log("now im here");
         const song = await Song.findOne({ 'comments._id': req.params.id, 'comments.user': req.user._id });
         if (!song) return res.redirect('/songs');
         song.comments.remove(req.params.id);
