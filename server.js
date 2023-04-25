@@ -1,6 +1,7 @@
 // Load express
 const express = require('express');
 const logger = require('morgan');
+const session = require('express-session');
 const indexRoutes = require('./routes/index');
 const songRoutes = require('./routes/songs');
 const commentsRoutes = require('./routes/comments');
@@ -20,6 +21,16 @@ require('./config/database');
 app.use(logger('dev'));
 app.use(express.static('public'));
 app.use(express.urlencoded({extended: false}));     // this creates req.body from an HTML form submission
+//use of resave & saveUninitialized settings
+//app.use(cookieParser());
+
+
+app.use(session({
+    secret: process.env.SECRET,
+    resave: false,
+    saveUninitialized: true
+}));
+
 
 //mount routes
 app.use('/', indexRoutes);
