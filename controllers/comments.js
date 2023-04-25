@@ -1,6 +1,10 @@
 const Song = require('../models/song');
 
 async function create(req, res) {
+    req.body.user = req.user._id;
+    req.body.userName = req.user.name;
+    req.body.userAvatar = req.user.avatar;
+
     try {
         const foundSong = await Song.findById(req.params.id);
         foundSong.comments.push(req.body);

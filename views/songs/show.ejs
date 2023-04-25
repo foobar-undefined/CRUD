@@ -14,6 +14,7 @@
                     </tr>
                 </thead>
                 <tbody>
+
                     <tr>
                         <td><%= song.song %></td>
                         <td><%= song.artist %></td>
@@ -24,6 +25,7 @@
         </section>
         <section>
             <h3>Reviews</h3>
+            <% if (user) { %>
             <form action="/songs/<%= song._id %>/comments" method="POST">
                 <label>
                     Comments:
@@ -31,7 +33,9 @@
                 </label> 
                 <input type="submit" value="Add Comment">
             </form>
+            <% } %>
             <% song.comments.forEach(s => { %>
+                <td class="comment-user"><img alt="avatar" src="<%= s.userAvatar %> referrerpolicy="no-referrer" ><%= s.userName %></td>
                 <tr>
                     <td><%= s.title %></td> 
                 </tr>

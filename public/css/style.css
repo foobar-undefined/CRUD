@@ -9,7 +9,7 @@ header {
 
 h1 {
     color: black;
-    font-size: 8vmin;
+    font-size: 5vmin;
     font-family: sans-serif;
     background-color: rgb(103, 38, 38);
     text-align: center;
@@ -81,5 +81,16 @@ footer {
   
   .login img {
     height: 30px;
+  }
+
+  .comment-user {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .comment-user img {
+    border-radius: 50%;
+    height: 40px;
   }
   
