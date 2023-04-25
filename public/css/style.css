@@ -21,6 +21,7 @@ h1 {
     font-family: sans-serif;
     background-color: lightgray;
     text-align: center;
+    /* padding: 4vmin; */
 } 
 
  h3 {
@@ -67,8 +68,8 @@ footer {
     display: flex;
     padding-left: 50vmin;
     padding-right: 50vmin;
-    padding-top: 5vmin;
-    padding-bottom: 3vmin;
+    padding-top: 35vmin;
+    padding-bottom: 5vmin;
 }
 
 .login {
