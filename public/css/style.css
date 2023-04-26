@@ -9,7 +9,7 @@ header {
 
 h1 {
     color: black;
-    font-size: 5vmin;
+    font-size: 8vmin;
     font-family: sans-serif;
     background-color: rgb(103, 38, 38);
     text-align: center;
@@ -21,7 +21,6 @@ h1 {
     font-family: sans-serif;
     background-color: lightgray;
     text-align: center;
-    /* padding: 4vmin; */
 } 
 
  h3 {
@@ -68,8 +67,8 @@ footer {
     display: flex;
     padding-left: 50vmin;
     padding-right: 50vmin;
-    padding-top: 35vmin;
-    padding-bottom: 5vmin;
+    padding-top: 5vmin;
+    padding-bottom: 3vmin;
 }
 
 .login {
@@ -81,16 +80,5 @@ footer {
   
   .login img {
     height: 30px;
-  }
-
-  .comment-user {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .comment-user img {
-    border-radius: 50%;
-    height: 40px;
   }
   
