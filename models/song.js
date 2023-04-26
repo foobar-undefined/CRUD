@@ -5,7 +5,7 @@ const commentSchema = new Schema({
     title: { type: String, required: true},
     Like: { type: Boolean, defualt: false},
     dislike: { type: Boolean, default: false},
-    user: { type: Schema.Types.ObjectId, ref: "User", require: true},
+    user: { type: Schema.Types.ObjectId, ref: "User", required: true},
     userName: {type: String},
     userAvatar: {type: String},
    
@@ -14,11 +14,11 @@ const commentSchema = new Schema({
 const songSchema = new Schema ({
     song: {
         type: String,
-        require: true
+        required: true
     },
     artist: {
         type: String,
-        require: true
+        required: true
     },
     genre: {
         type: String, 
