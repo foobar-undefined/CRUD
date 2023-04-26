@@ -1,16 +1,46 @@
-header {
+body {
+    background-color: rgb(63, 213, 158);
+    font-size: 2vmin;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    /* padding-left: 20vmin;
+    padding-right: 30vmin;
+    padding-top: 15vmin;
+    padding-bottom: 5vmin; */
+}
+
+.navigator{
+  overflow: hidden;
+  background-color: #333;
+}
+
+.navigator a{
+    float: left;
+    color: white;
+    text-align: center;
+    padding-left: 8vmin;
+    padding-right: 10vmin;
+    padding-top: 2vmin;
+    padding-bottom: 2vmin;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.navigator a:hover {
+    background-color: #ddd;
+    color:black;  
+}
+
+/* header {
     color: black;
     font-size: 5vmin;
-    font-family: cursive;
     letter-spacing: 1vmin;
     background-color: aqua;
     text-align: center;
-}
+} */
 
 head {
-    
-    /* font-size: 2vmin;
-    font-family: cursive; */
     letter-spacing: 1vmin;
     background-color: aqua;
     text-align: center;
@@ -19,23 +49,21 @@ head {
 h1 {
     color: black;
     font-size: 8vmin;
-    font-family: sans-serif;
-    background-color: maroon;
+    /* font-family: sans-serif; */
     text-align: center;
 }
 
  h2 {
     color: pink;
     /* font-size: 2vmin; */
-    font-family: sans-serif;
+    /* font-family: sans-serif; */
     background-color: lightgray;
     text-align: center;
 } 
 
  h3 {
-    color: yellow;
     font-size: 3vmin;
-    font-family: sans-serif;
+    /* font-family: sans-serif; */
     background-color: lightgray;
     text-align: center;
 } 
@@ -43,21 +71,11 @@ h1 {
  h4 {
     /* color: orange; */
     font-size: 6vmin;
-    font-family: sans-serif;
+    /* font-family: sans-serif; */
     /* background-color: lightgray; */
     text-align: center;
 } 
 
-body {
-    background-color: rgb(63, 213, 158);
-    font-size: 2vmin;
-    justify-content: center;
-    align-items: center;
-    /* padding-left: 20vmin;
-    padding-right: 30vmin;
-    padding-top: 15vmin;
-    padding-bottom: 5vmin; */
-}
 
 #song-artist-genre {
     padding-left: 20vmin;
@@ -95,23 +113,21 @@ footer {
     justify-content: center;
     align-items: center;
     height: 50px;
-    background-color: yellow;
-    padding-top: 4vmin;
-    padding-bottom: 5vmin;
-  }
-  
-  .login img {
-    height: 30px;
-  }
 
-  .comment-user {
+}
+  
+  
+.login img {
+    height: 30px;
+}
+
+.comment-user {
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  
-  .comment-user img {
+}
+
+.comment-user img {
     border-radius: 50%;
     height: 40px;
-  }
-  
+}

@@ -14,6 +14,7 @@
                     </tr>
                 </thead>
                 <tbody>
+
                     <tr>
                         <td><%= song.song %></td>
                         <td><%= song.artist %></td>
@@ -43,6 +44,7 @@
                                 <button type="submit">X</button>
                             </form>
                             <form id="editComment" action="/songs/<%= s._id %>/comments?_method=PUT" method="POST">
+                                <%=s._id%>>
                                 <textarea name="title" required><%= s.title %></textarea>
                                     <button type="submit">edit</button>
                                 <% } %>

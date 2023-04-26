@@ -13,7 +13,6 @@ passport.use(new GoogleStrategy(
     //callback function, to consume promises using await 
     async function(accessToken, refreshToken, profile, callBack){
         try{
-            console.log(profile);
             let user = await User.findOne({ googleID: profile.id});
             if(user) return callBack(null, user);     
             user = await User.create({
