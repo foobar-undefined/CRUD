@@ -1,6 +1,6 @@
 <header>
     <div class="navigator">
-        <a class="all-songs" href="/songs" <%- title === 'All Songs' ? 'class="active"' : ''%>>All Songs</a>
+        <a href="/songs" <%- title === 'All Songs' ? 'class="active"' : ''%>>All Songs</a>
         <% if (user) { %>
             <a href="/songs/new"<%- title === 'Add Songs' ? 'class="active"' : ''%>>Add Songs</a>
             <a href="/logout">LOG OUT</a>
