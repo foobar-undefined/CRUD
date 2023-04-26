@@ -5,9 +5,10 @@ const userSchema = new Schema({
     name:{type: String},
     googleID:{
         type: String, 
-        require: true
+        required: true, 
+        unique: true
     }, 
-    email: {type: String},         
+    email: {type: String, required: true, unique: true},         
     avatar: {type: String} ,
     songAdded: [{
         type: Schema.Types.ObjectId,

@@ -13,9 +13,9 @@ passport.use(new GoogleStrategy(
     //callback function, to consume promises using await 
     async function(accessToken, refreshToken, profile, callBack){
         try{
-            let user = await User.findOne({ googleId: profile.id});
-            if(user) return callBack(null, user);
-
+            console.log(profile);
+            let user = await User.findOne({ googleID: profile.id});
+            if(user) return callBack(null, user);     
             user = await User.create({
                 name: profile.displayName,
                 googleID: profile.id,
