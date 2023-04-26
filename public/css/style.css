@@ -4,10 +4,7 @@ body {
     justify-content: center;
     align-items: center;
     font-family: Arial, Helvetica, sans-serif;
-    /* padding-left: 20vmin;
-    padding-right: 30vmin;
-    padding-top: 15vmin;
-    padding-bottom: 5vmin; */
+    margin: 0;
 }
 
 .navigator{
@@ -28,17 +25,14 @@ body {
 }
 
 .navigator a:hover {
-    background-color: #ddd;
+    background-color: #04AA6D;;
     color:black;  
 }
 
-/* header {
-    color: black;
+header {
     font-size: 5vmin;
-    letter-spacing: 1vmin;
-    background-color: aqua;
     text-align: center;
-} */
+}
 
 head {
     letter-spacing: 1vmin;
