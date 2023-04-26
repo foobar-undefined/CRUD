@@ -34,28 +34,30 @@ async function deleteComment(req, res) {
 
 async function editComment(req, res){
     try{
-        const edit = await Song.findById(req.params.id);
-        edit.comments.push(req.body);
-        await edit.save();
+        const song = await Song.findById(req.params.id);
+        const comment = song.comments.id(req.params.commentId);
+        comment.text = req.body.text;
+        await song.save();
+        res.send(comment);
     }catch(error){
         console.log(error);
         res.render('error', {title: "ruh Oh! Here's a scooby snack!"});
     }
 }
 
-async function updateComment(req, res){
-    try{
-        const updateComment = await Song.findByIdAndUpdate(req.params.id, req.body)
-        res.redirect(`/songs/${updateComment._id}`);
-    }catch(error){
-        console.log(error);
-        res.render('error', {title: "ruh Oh! Here's a scooby snack!"});
-    }
-}
+// async function updateComment(req, res){
+//     try{
+//         const updateComment = await Song.comments.findById(req.params.id)
+//         //res.redirect(`/songs/${updateComment._id}`);
+//     }catch(error){
+//         console.log(error);
+//         res.render('error', {title: "ruh Oh! Here's a scooby snack!"});
+//     }
+// }
 
 module.exports = {
     create,
     edit: editComment,
-    update: updateComment,
+    //update: updateComment,
     delete: deleteComment
 };
