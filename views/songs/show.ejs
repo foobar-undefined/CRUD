@@ -42,7 +42,10 @@
                             <form action="/songs/<%= s._id %>/comments?_method=DELETE" method="POST">
                                 <button type="submit">X</button>
                             </form>
-                        <% } %>
+                            <form id="editComment" action="/songs/<%= s._id %>/comments?_method=PUT" method="POST">
+                                <textarea name="title" required><%= s.title %></textarea>
+                                    <button type="submit">edit</button>
+                                <% } %>
                     </td>
                 </tr>
             <% }) %>

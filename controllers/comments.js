@@ -32,7 +32,30 @@ async function deleteComment(req, res) {
     }
 }
 
+async function editComment(req, res){
+    try{
+        const edit = await Song.findById(req.params.id);
+        edit.comments.push(req.body);
+        await edit.save();
+    }catch(error){
+        console.log(error);
+        res.render('error', {title: "ruh Oh! Here's a scooby snack!"});
+    }
+}
+
+async function updateComment(req, res){
+    try{
+        const updateComment = await Song.findByIdAndUpdate(req.params.id, req.body)
+        res.redirect(`/songs/${updateComment._id}`);
+    }catch(error){
+        console.log(error);
+        res.render('error', {title: "ruh Oh! Here's a scooby snack!"});
+    }
+}
+
 module.exports = {
     create,
+    edit: editComment,
+    update: updateComment,
     delete: deleteComment
 };

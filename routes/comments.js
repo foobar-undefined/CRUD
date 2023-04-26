@@ -8,4 +8,8 @@ router.post('/songs/:id/comments', ensureLoggedIn, commentsController.create);
 
 router.delete('/songs/:id/comments', ensureLoggedIn, commentsController.delete);
 
+router.put('/songs/:id/comments',ensureLoggedIn, commentsController.update )
+
+router.get('/songs/:id/comments',ensureLoggedIn, commentsController.edit )
+
 module.exports = router;
