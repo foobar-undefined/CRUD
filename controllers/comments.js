@@ -32,12 +32,12 @@ async function deleteComment(req, res) {
 
 async function editComment(req, res){
     try{
-        const song = await Song.findById(req.params.id).populate('comments', {title: req.body});
-        //const comment = song.comments;
-        console.log(song)
+        //trying to get comment id
+        const song = await Song.findById(req.params.id);
+        const comment = song.comments;
         comment.text = req.body.text;
         await song.save();
-        res.send(comment);
+        //want to render this 
     }catch(error){
         console.log(error);
         res.render('error', {title: "ruh Oh! Here's a scooby snack!"});

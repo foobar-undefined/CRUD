@@ -3,37 +3,39 @@
     <%- include('../partials/head') %>
     <body>
         <%- include('../partials/header') %>
-        <section>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Song</th>
-                        <th>Artist</th>
-                        <th>Genre</th>
-                    </tr>
-                </thead>
-                <tbody id="song-artist-genre">
-                    <% songs.forEach(s => { %>
-                    <tr>
-                        <td>
-                            <%= s.song %>
-                        </td>
-                        <td>
-                            <%= s.artist %>
-                        </td>
-                        <td>
-                            <%= s.genre %>
-                        </td>
-                        <td>
-                            <a href = "/songs/<%= s._id %>">Reviews</a>
-                        </td>
-                    </tr>
-                    <% }); %>
-                    
-                </tbody>
-            </table>
-        </section>
+            <div class="block-style-container">
+                    <table>
+                        <thead>
+                            <div class ="topics">
+                                <tr>
+                                    <th>Song</th>
+                                    <th>Artist</th>
+                                    <th>Genre</th>
+                                </tr>
+                            </div>
+                        </thead>
+                        <tbody id="song-artist-genre">
+                            <% songs.forEach(s => { %>
+                            <tr>
+                                <td>
+                                    <%= s.song %>
+                                </td>
+                                <td>
+                                    <%= s.artist %>
+                                </td>
+                                <td>
+                                    <%= s.genre %>
+                                </td>
+                                <td>
+                                    <a href = "/songs/<%= s._id %>">Reviews</a>
+                                </td>
+                            </tr>
+                            <% }); %>
+                            
+                        </tbody>
+                    </table>
 
+            </div>
         <%- include('../partials/footer') %>
 </body>
 </html>
