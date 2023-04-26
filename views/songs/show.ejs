@@ -37,7 +37,6 @@
             <% song.comments.forEach(s => { %>
                 <td class="comment-user"><img alt="avatar" src="<%= s.userAvatar %>" referrerpolicy="no-referrer"><%= s.userName %></td>
                 <tr>
-                    <td><%= s.user %></td>
                     <td><%= s.title %></td> 
                     <td>
                         <% if (user?._id.equals(s.user)) { %>
