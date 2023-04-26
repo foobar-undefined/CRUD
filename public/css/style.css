@@ -1,7 +1,16 @@
 header {
     color: black;
-    font-size: 8vmin;
+    font-size: 5vmin;
     font-family: cursive;
+    letter-spacing: 1vmin;
+    background-color: aqua;
+    text-align: center;
+}
+
+head {
+    
+    /* font-size: 2vmin;
+    font-family: cursive; */
     letter-spacing: 1vmin;
     background-color: aqua;
     text-align: center;
@@ -11,31 +20,31 @@ h1 {
     color: black;
     font-size: 8vmin;
     font-family: sans-serif;
-    background-color: rgb(103, 38, 38);
+    background-color: maroon;
     text-align: center;
 }
 
  h2 {
-    color: maroon;
-    font-size: 4vmin;
+    color: pink;
+    /* font-size: 2vmin; */
     font-family: sans-serif;
     background-color: lightgray;
     text-align: center;
 } 
 
  h3 {
-    color: maroon;
-    font-size: 4vmin;
+    color: yellow;
+    font-size: 3vmin;
     font-family: sans-serif;
     background-color: lightgray;
     text-align: center;
 } 
 
  h4 {
-    color: maroon;
-    font-size: 8vmin;
+    /* color: orange; */
+    font-size: 6vmin;
     font-family: sans-serif;
-    background-color: lightgray;
+    /* background-color: lightgray; */
     text-align: center;
 } 
 
@@ -44,7 +53,17 @@ body {
     font-size: 2vmin;
     justify-content: center;
     align-items: center;
+    /* padding-left: 20vmin;
+    padding-right: 30vmin;
+    padding-top: 15vmin;
+    padding-bottom: 5vmin; */
+}
 
+#song-artist-genre {
+    padding-left: 20vmin;
+    padding-right: 20vmin;
+    padding-top: 15vmin;
+    padding-bottom: 5vmin;
 }
 
  button {
@@ -67,18 +86,32 @@ footer {
     display: flex;
     padding-left: 50vmin;
     padding-right: 50vmin;
-    padding-top: 5vmin;
-    padding-bottom: 3vmin;
+    padding-top: 35vmin;
+    padding-bottom: 5vmin;
 }
 
 .login {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 34px;
+    height: 50px;
+    background-color: yellow;
+    padding-top: 4vmin;
+    padding-bottom: 5vmin;
   }
   
   .login img {
     height: 30px;
+  }
+
+  .comment-user {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .comment-user img {
+    border-radius: 50%;
+    height: 40px;
   }
   
