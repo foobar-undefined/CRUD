@@ -115,13 +115,4 @@ footer {
     border-radius: 50%;
     height: 30px;
   }
-
-  nav {
-    background-color: rgb(63, 213, 158);
-    font-size: 2vmin;
-    justify-content: center;
-    align-items: center;
-    padding-top: 4vmin;
-    padding-bottom: 5vmin;
-  }
   
