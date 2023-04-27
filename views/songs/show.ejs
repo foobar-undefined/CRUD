@@ -30,14 +30,14 @@
             <% if (user) { %>
             <form action="/songs/<%= song._id %>/comments" method="POST">
                 <label>
-                    Comments:
                     <textarea name="title" id="show-comment-box" cols="30" rows="10" required></textarea>
                 </label> 
-                <input type="submit" value="Add Comment">
+                <br>
+                <input type="submit" value="Add Comment" class="show-add-comment-button">
             </form>
             <% } %>
             <% song.comments.forEach(s => { %>
-                <td class="comment-user"><img alt="avatar" src="<%= s.userAvatar %>" referrerpolicy="no-referrer"><%= s.userName %></td>
+                <td class="show-comment-user"><img alt="avatar" src="<%= s.userAvatar %>" referrerpolicy="no-referrer"><%= s.userName %></td>
                 <tr>
                     <td><%= s.title %></td> 
                     
