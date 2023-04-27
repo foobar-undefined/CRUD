@@ -8,7 +8,6 @@ const commentSchema = new Schema({
     user: { type: Schema.Types.ObjectId, ref: "User", required: true},
     userName: {type: String},
     userAvatar: {type: String},
-   
 }, { timestamps: true });
 
 const songSchema = new Schema ({
