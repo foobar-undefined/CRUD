@@ -1,14 +1,5 @@
 @import url("index.css");
 
-body {
-    background-color: rgb(63, 213, 158);
-    font-size: 2vmin;
-    justify-content: center;
-    align-items: center;
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 0;
-}
-
 .navigator{
   overflow: hidden;
   background-color: #333;
@@ -31,48 +22,25 @@ body {
     color:black;  
 }
 
-header {
+#header-title {
     font-size: 5vmin;
     text-align: center;
 }
 
-head {
+body {
+    background-color: rgb(63, 213, 158);
+    font-size: 2vmin;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+/* head {
     letter-spacing: 1vmin;
     background-color: aqua;
     text-align: center;
-}
-
-h1 {
-    color: black;
-    font-size: 8vmin;
-    /* font-family: sans-serif; */
-    /* text-align: center; */
-}
-
- h2 {
-    color: pink;
-    /* font-size: 2vmin; */
-    /* font-family: sans-serif; */
-    background-color: lightgray;
-    /* text-align: center; */
-} 
-
- h3 {
-    font-size: 3vmin;
-    /* font-family: sans-serif; */
-    background-color: lightgray;
-    /* text-align: center; */
-} 
-
- h4 {
-    /* color: orange; */
-    font-size: 6vmin;
-    /* font-family: sans-serif; */
-    /* background-color: lightgray; */
-    /* text-align: center; */
-} 
-
-
+} */ 
 
 button {
     margin-top: 3vmin;
@@ -88,13 +56,11 @@ button:hover {
     color: white;
 }
 
-
 .login {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 50px;
-    
+    height: 50px;  
 }
 
 .login img {
