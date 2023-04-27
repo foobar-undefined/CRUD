@@ -46,17 +46,19 @@ async function editComment(req, res){
 
 // async function updateComment(req, res){
 //     try{
-//         const updateComment = await Song.comments.findById(req.params.id)
-//         //res.redirect(`/songs/${updateComment._id}`);
+//         const updateComment = await Song.comments.findById(req.params.id);
+//         updateComment.text = req.body.text;
+//         await updateComment.save();
+//         res.redirect(`/songs/${updateComment.songId});
 //     }catch(error){
 //         console.log(error);
 //         res.render('error', {title: "ruh Oh! Here's a scooby snack!"});
 //     }
-// }
+// };
 
 module.exports = {
     create,
     edit: editComment,
-    //update: updateComment,
+    // update: updateComment,
     delete: deleteComment
 };
