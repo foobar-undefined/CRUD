@@ -35,12 +35,12 @@ async function editComment(req, res){
         const song = await Song.findById(req.params.id);
         const foundUser = await User.findOne({_id: req.user._id});
         const commentsForSong = song.comments.filter(c=> c.user.equals(foundUser._id));
+        console.log(song.comments._id)
         console.log(commentsForSong)
         res.render('songs/edit',{
         songs: song, 
         title: 'All songs',
         comments: commentsForSong, 
-        comment
     });
     }catch(error){
         console.log(error);
@@ -50,10 +50,17 @@ async function editComment(req, res){
 
 async function updateComment(req, res){
     try{
-        const updateComment = await Song.comments.findById(req.params.id);
-        updateComment.text = req.body.text;
-        await updateComment.save();
-         res.redirect(`/songs/${updateComment._id}`);
+        const commentId = req.params.id;
+        const updatedText = req.body.text;
+        const updatedComment = await Song.comments.findByOneAndUpdate({
+            _id: commentId}, 
+            {text: updatedText}, 
+            {new: true});
+        res.redirect(`/songs/${updatedComment.song}/comments`);
+        // const updateComment = await Song.comments.findById(req.params.id);
+        // updateComment.text = req.body.text;
+        // await updateComment.save();
+        //  res.redirect(`/songs/${updateComment._id}`);
     }catch(error){
         console.log(error);
         res.render('error', {title: "ruh Oh! Here's a scooby snack!"});
