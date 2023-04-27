@@ -1,4 +1,5 @@
 const Song = require('../models/song');
+const User = require('../models/user');
 
 async function create(req, res) {
     req.body.user = req.user._id;
@@ -33,32 +34,33 @@ async function deleteComment(req, res) {
 async function editComment(req, res){
     try{
         //trying to get comment id
+        console.log("where am i");
         const song = await Song.findById(req.params.id);
-        const comment = song.comments;
-        comment.text = req.body.text;
-        await song.save();
-        //want to render this 
+        console.log(song);
+        const foundUser = await User.findOne({_id: req.user._id});
+        const commentsForSong = song.comments.filter(c=> c.user.equals(foundUser._id));
+        res.render('songs/edit');
     }catch(error){
         console.log(error);
         res.render('error', {title: "ruh Oh! Here's a scooby snack!"});
     }
 }
 
-// async function updateComment(req, res){
-//     try{
-//         const updateComment = await Song.comments.findById(req.params.id);
-//         updateComment.text = req.body.text;
-//         await updateComment.save();
-//         res.redirect(`/songs/${updateComment.songId});
-//     }catch(error){
-//         console.log(error);
-//         res.render('error', {title: "ruh Oh! Here's a scooby snack!"});
-//     }
-// };
+async function updateComment(req, res){
+    try{
+        const updateComment = await Song.comments.findById(req.params.id);
+        updateComment.text = req.body.text;
+        await updateComment.save();
+        return res.redirect('/songs')
+    }catch(error){
+        console.log(error);
+        res.render('error', {title: "ruh Oh! Here's a scooby snack!"});
+    }
+};
 
 module.exports = {
     create,
     edit: editComment,
-    // update: updateComment,
+    update: updateComment,
     delete: deleteComment
 };
