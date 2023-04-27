@@ -3,6 +3,23 @@
     font-size: 200px;
 }
 
-#song-artist-genre {
+#index-options {
     background-color: aqua;
+    display: grid;
+    /* grid-template-columns: repeat(4, 8vmin);
+    grid-template-rows: repeat(3, 10vmin);
+    gap: 1vmin;
+    margin-top: auto;
+    font-size: 2vmin; */
+    justify-content: center;
+    align-items: center;
+    /* padding-left: 10vmin;
+    padding-right: 20vmin;
+    padding-top: 15vmin;
+    padding-bottom: 30vmin; */
+}
+
+.index-container {
+    position: grid;
+    
 }
