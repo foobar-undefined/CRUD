@@ -1,3 +1,5 @@
+@import url("index.css");
+
 body {
     background-color: rgb(63, 213, 158);
     font-size: 2vmin;
@@ -110,16 +112,9 @@ button:hover {
     height: 30px;
 }
 
-.block-style-container{
+.block-style-container {
     position: fixed;
     
-}
-
-#song-artist-genre {
-    padding-left: 50vmin;
-    padding-right: 20vmin;
-    padding-top: 15vmin;
-    padding-bottom: 5vmin;
 }
 
 .footer {

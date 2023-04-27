@@ -8,7 +8,7 @@ router.post('/songs/:id/comments', ensureLoggedIn, commentsController.create);
 
 router.get('/songs/:id',ensureLoggedIn, commentsController.edit)
 
-// router.put('/songs/:id/comments',ensureLoggedIn, commentsController.update )
+// router.put('/songs/:id/',ensureLoggedIn, commentsController.update)
 
 router.delete('/songs/:id/comments', ensureLoggedIn, commentsController.delete);
 
