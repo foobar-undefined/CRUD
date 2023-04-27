@@ -1,25 +1,27 @@
+.index-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 20vmin);
+    gap: 1.5vmin;
+    margin-top: auto;
+    padding: 5vmin;
+}
+
 #index-topics {
     background-color: red;
     font-size: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-row: span 2;
 }
 
 #index-options {
     background-color: aqua;
-    display: grid;
-    /* grid-template-columns: repeat(4, 8vmin);
-    grid-template-rows: repeat(3, 10vmin);
-    gap: 1vmin;
-    margin-top: auto;
-    font-size: 2vmin; */
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* padding-left: 10vmin;
-    padding-right: 20vmin;
-    padding-top: 15vmin;
-    padding-bottom: 30vmin; */
-}
-
-.index-container {
-    position: grid;
-    
+    padding: 1.5vmin;
+    grid-row: span 2;
 }
