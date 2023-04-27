@@ -1,10 +1,12 @@
- <%- include('../partials/header') %>
-
 <main>
-    <form id="editComment" action="/songs/<%= song.comments._id %>/comments?_method=PUT" method="POST">
-        <textarea name="title" required><%= song.comments.title%></textarea>
-            <button type="submit">edit</button>
-
+    <% songs.comments.forEach(c => { %>
+            <form action="/songs/<%= c._id %>/comments?_method=PUT" method="POST">
+                <p><strong><%= c.title%></strong></p>
+                <%=c.user%>
+                <textarea name="title" required><%= c.title%></textarea>
+                <button type="submit">edit</button>
+            </form>
+    <%}); %> 
 </main>
 
 <%- include('../partials/footer') %>
