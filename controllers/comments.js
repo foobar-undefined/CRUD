@@ -2,12 +2,11 @@ const Song = require('../models/song');
 const User = require('../models/user');
 
 async function create(req, res) {
-    req.body.user = req.user._id;
-    req.body.userName = req.user.name;
-    req.body.userAvatar = req.user.avatar;
-
     try {
         const foundSong = await Song.findById(req.params.id);
+        req.body.user = req.user._id;
+        req.body.userName = req.user.name;
+        req.body.userAvatar = req.user.avatar;
         foundSong.comments.push(req.body);
         await foundSong.save()
         res.redirect(`/songs/${foundSong._id}`);
@@ -33,13 +32,12 @@ async function deleteComment(req, res) {
 
 async function editComment(req, res){
     try{
-        //trying to get comment id
-        console.log("where am i");
-        const song = await Song.findById(req.params.id);
-        console.log(song);
-        const foundUser = await User.findOne({_id: req.user._id});
-        const commentsForSong = song.comments.filter(c=> c.user.equals(foundUser._id));
-        res.render('songs/edit');
+        const song = await Song.findOne({"comments._id": req.params.id}).populate('comments.user'); // make sure to send the comment id through req.params instead of the song id
+        const commentToEdit = song.comments.id(req.params.id);
+        res.render('songs/edit',{
+           title: 'All songs',
+           commentToEdit
+    });
     }catch(error){
         console.log(error);
         res.render('error', {title: "ruh Oh! Here's a scooby snack!"});
@@ -48,10 +46,12 @@ async function editComment(req, res){
 
 async function updateComment(req, res){
     try{
-        const updateComment = await Song.comments.findById(req.params.id);
-        updateComment.text = req.body.text;
-        await updateComment.save();
-        return res.redirect('/songs')
+        const song = await Song.findOne({"comments._id": req.params.id}); // make sure to send the comment id through req.params instead of the song id
+        const commentToUpdate = song.comments.id(req.params.id);
+        commentToUpdate.set(req.body);
+        // commentToUpdate.text = req.body.text
+        await song.save();
+        res.redirect(`/songs/${song._id}`)
     }catch(error){
         console.log(error);
         res.render('error', {title: "ruh Oh! Here's a scooby snack!"});

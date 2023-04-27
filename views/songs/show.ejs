@@ -3,6 +3,7 @@
     <%- include('../partials/head') %>
     <body>
         <%- include('../partials/header') %>
+
         <section>
             <div class="show-table-wrapper">
             <table>
@@ -13,7 +14,8 @@
                         <th>Genre</th>
                     </tr>
                 </thead>
-                <tbody class="show-body">
+                    <tbody class="show-body"></tbody>
+
                     <tr>
                         <td><%= song.song %></td>
                         <td><%= song.artist %></td>
@@ -38,14 +40,13 @@
                 <td class="comment-user"><img alt="avatar" src="<%= s.userAvatar %>" referrerpolicy="no-referrer"><%= s.userName %></td>
                 <tr>
                     <td><%= s.title %></td> 
+                    
                     <td>
                         <% if (user?._id.equals(s.user)) { %>
                             <form action="/songs/<%= s._id %>/comments?_method=DELETE" method="POST">
                                 <button type="submit">X</button>
                             </form>
-                            <%= s._id%>
-                            <a href="/songs/<%= song._id %>/comments/<%= s._id %>/edit"><button> Edit</button></a> 
-                            
+                            <a href="/comments/<%= s._id %>/edit"><button> Edit</button></a>                
                             <% } %>
                     </td>
                 </tr>
