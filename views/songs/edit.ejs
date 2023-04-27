@@ -1,4 +1,7 @@
+<%- include('../partials/head') %>
+<%- include('../partials/header') %>
 <main>
+
     <% songs.comments.forEach(c => { %>
             <form action="/songs/<%= c._id %>/comments?_method=PUT" method="POST">
                 <p><strong><%= c.title%></strong></p>
