@@ -1,4 +1,6 @@
 @import url("index.css");
+@import url("new.css");
+@import url("show.css");
 
 .navigator{
   overflow: hidden;
@@ -58,7 +60,7 @@ h4 {
     text-align: center;
 }  */
 
-button {
+/* button {
     margin-top: 3vmin;
     font-size: 2vmin;
     border: 0.06vmin solid black;
@@ -70,7 +72,7 @@ button {
 button:hover {
     background-color: black;
     color: white;
-}
+} */
 
 .login {
     display: flex;
