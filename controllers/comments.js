@@ -32,15 +32,11 @@ async function deleteComment(req, res) {
 
 async function editComment(req, res){
     try{
-        const song = await Song.findById(req.params.id);
-        const foundUser = await User.findOne({_id: req.user._id});
-        const commentsForSong = song.comments.filter(c=> c.user.equals(foundUser._id));
-        console.log(song.comments._id)
-        console.log(commentsForSong)
+        const song = await Song.findOne({"comments._id": req.params.id}).populate('comments.user'); // make sure to send the comment id through req.params instead of the song id
+        const commentToEdit = song.comments.id(req.params.id);
         res.render('songs/edit',{
-        songs: song, 
-        title: 'All songs',
-        comments: commentsForSong, 
+           title: 'All songs',
+           commentToEdit
     });
     }catch(error){
         console.log(error);
@@ -50,17 +46,12 @@ async function editComment(req, res){
 
 async function updateComment(req, res){
     try{
-        const commentId = req.params.id;
-        const updatedText = req.body.text;
-        const updatedComment = await Song.comments.findByOneAndUpdate({
-            _id: commentId}, 
-            {text: updatedText}, 
-            {new: true});
-        res.redirect(`/songs/${updatedComment.song}/comments`);
-        // const updateComment = await Song.comments.findById(req.params.id);
-        // updateComment.text = req.body.text;
-        // await updateComment.save();
-        //  res.redirect(`/songs/${updateComment._id}`);
+        const song = await Song.findOne({"comments._id": req.params.id}); // make sure to send the comment id through req.params instead of the song id
+        const commentToUpdate = song.comments.id(req.params.id);
+        commentToUpdate.set(req.body);
+        // commentToUpdate.text = req.body.text
+        await song.save();
+        res.redirect(`/songs/${song._id}`)
     }catch(error){
         console.log(error);
         res.render('error', {title: "ruh Oh! Here's a scooby snack!"});

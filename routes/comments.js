@@ -6,7 +6,7 @@ const commentsController = require('../controllers/comments');
 
 router.post('/songs/:id/comments', ensureLoggedIn, commentsController.create);
 
-router.get('/songs/:id/comments/:commentID/edit',ensureLoggedIn, commentsController.edit)
+router.get('/comments/:id/edit',ensureLoggedIn, commentsController.edit)
 
 router.put('/songs/:id/comments',ensureLoggedIn, commentsController.update)
 
