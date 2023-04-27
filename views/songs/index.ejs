@@ -6,13 +6,11 @@
             <div class="index-container">
                     <table>
                         <thead>
-                            <div class ="index-topics">
-                                <tr>
+                                <tr class ="index-topics">
                                     <th>Song</th>
                                     <th>Artist</th>
                                     <th>Genre</th>
                                 </tr>
-                            </div>
                         </thead>
                         <tbody id="index-options">
                             <% songs.forEach(s => { %>
@@ -34,7 +32,6 @@
                             
                         </tbody>
                     </table>
-
             </div>
         <%- include('../partials/footer') %>
 </body>

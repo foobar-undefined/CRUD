@@ -36,11 +36,27 @@ body {
     margin: 0;
 }
 
+/* h1 {
+    color: black;
+}
+
+h2 {
+    color: black;
+}
+
+h3 {
+    color: black
+}
+
+h4 {
+    color: black;
+} */
+
 /* head {
     letter-spacing: 1vmin;
     background-color: aqua;
     text-align: center;
-} */ 
+}  */
 
 button {
     margin-top: 3vmin;
@@ -78,10 +94,10 @@ button:hover {
     height: 30px;
 }
 
-.block-style-container {
+/* .block-style-container {
     position: fixed;
     
-}
+} */
 
 .footer {
     position: fixed;
