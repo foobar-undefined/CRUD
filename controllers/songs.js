@@ -1,4 +1,5 @@
 const Song = require("../models/song");
+const User = require("../models/user")
 
 
 function newSong(req, res){
@@ -23,8 +24,12 @@ async function index(req, res){
 
 async function create(req, res){
     try{
-        const song = await Song.create(req.body)
-        res.redirect('songs');
+        const newSong = await Song.create(req.body); 
+        const updatedUser = await User.findOne({_id: req.user._id})
+        console.log(updatedUser.songAdded)
+        updatedUser.songAdded.push(newSong);
+        await updatedUser.save()
+        res.redirect('/songs');
         
     }catch(error){
         console.error(error);
