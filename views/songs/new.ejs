@@ -3,6 +3,7 @@
     <%- include('../partials/head') %>
     <%- include('../partials/header') %>
 <h2>Project 2</h2>
+    <div class="new-project-grid">
     <div class="new-song"></div>
     <form action = "/songs" method="POST">
         <label> Song:
@@ -12,7 +13,7 @@
             <input type="string" name="artist">
         </label>
         <label> Genre:
-            <select name = "genre">
+            <select name = "genre" id="new-genre-dropdown">
                 <option value= "pop">POP</option>
                 <option value= "rock">ROCK</option>
                 <option value= "edm">EDM</option>
@@ -20,7 +21,7 @@
                 <option value= "rap">RAP</option>
             </select>
         </label>
-        <button type="submit">Add Song</button>
+        <button type="submit" id="add-song-button">Add Song</button>
     </form>
 </div>
 <body>
