@@ -44,20 +44,37 @@ table {
 }
 
 #show-comment-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background-color: orange;
-    border: 1px solid black;
-    padding: 2vmin;
-    font-size: 2vmin;
-    line-height: 1.5;
-    resize: vertical;
-    min-height: 10vmin;
-    width: 40vmin;
-    height: 8vmin;
-    border-radius: 2vmin;
     border: 2px solid black;
+    border-radius: 2vmin;
     padding: 2vmin;
+    width: 40vmin;
+    min-height: 10vmin;
+    margin-top: 20vmin;
 }
 
+#show-comment-box label {
+    margin-top: 10px;
+}
+
+#show-comment-box textarea {
+    border-radius: 50px;
+    border: none;
+    padding: 10px;
+    margin-top: 10px;
+    width: 80%;
+    max-width: 600px;
+    height: 150px;
+    resize: none;
+    font-size: 20px;
+}
 /* table {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
