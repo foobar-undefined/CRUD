@@ -1,4 +1,6 @@
 @import url("index.css");
+@import url("new.css");
+@import url("show.css");
 
 .navigator{
   overflow: hidden;
@@ -36,13 +38,28 @@ body {
     margin: 0;
 }
 
+/* h1 {
+    color: black;
+}
+
+h2 {
+}
+
+h3 {
+    color: black
+}
+
+h4 {
+    color: black;
+} */
+
 /* head {
     letter-spacing: 1vmin;
     background-color: aqua;
     text-align: center;
-} */ 
+}  */
 
-button {
+/* button {
     margin-top: 3vmin;
     font-size: 2vmin;
     border: 0.06vmin solid black;
@@ -54,7 +71,7 @@ button {
 button:hover {
     background-color: black;
     color: white;
-}
+} */
 
 .login {
     display: flex;
@@ -78,10 +95,10 @@ button:hover {
     height: 30px;
 }
 
-.block-style-container {
+/* .block-style-container {
     position: fixed;
     
-}
+} */
 
 .footer {
     position: fixed;
