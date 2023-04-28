@@ -36,16 +36,17 @@
             <% } %>
             <h3>Comments</h3>
             <% song.comments.forEach(s => { %>
-                <td class="show-comment-user"><img alt="avatar" src="<%= s.userAvatar %>" referrerpolicy="no-referrer"><%= s.userName %></td>
+                <div class="show-comment-container"></div>
+                <td class="show-comment-user"><img alt="avatar" src="<%= s.userAvatar %>" referrerpolicy="no-referrer" class="show-comment-user"><%= s.userName %></td>
                 <tr>
                     <td><%= s.title %></td> 
                     
-                    <td>
+                    <td class="show-comment-options">
                         <% if (user?._id.equals(s.user)) { %>
                             <form action="/songs/<%= s._id %>/comments?_method=DELETE" method="POST">
-                                <button type="submit">X</button>
+                                <button type="submit" class="delete-button">Delete Comment</button>
                             </form>
-                            <a href="/comments/<%= s._id %>/edit"><button> Edit</button></a>                
+                            <a href="/comments/<%= s._id %>/edit"><button class="edit-button"> Edit Comment</button></a>                
                             <% } %>
                     </td>
                 </tr>
