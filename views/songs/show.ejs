@@ -5,7 +5,7 @@
         <%- include('../partials/header') %>
 
         <section>
-            <table>
+            <table class ="muisc-info">
                 <thead>
                     <tr>
                         <th>Song</th>
@@ -23,7 +23,7 @@
             </table>
         </section>
         <section>
-            <h3>Comments</h3>
+            
             <% if (user) { %>
             <form action="/songs/<%= song._id %>/comments" method="POST">
                 <label>
@@ -33,6 +33,7 @@
                 <input type="submit" value="Add Comment" class="show-add-comment-button">
             </form>
             <% } %>
+            <h3>Comments</h3>
             <% song.comments.forEach(s => { %>
                 <td class="show-comment-user"><img alt="avatar" src="<%= s.userAvatar %>" referrerpolicy="no-referrer"><%= s.userName %></td>
                 <tr>
