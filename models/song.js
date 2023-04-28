@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
+mongoose.connect( process.env.MONGODB_URI );
 
 const commentSchema = new Schema({
     title: { type: String, required: true},
