@@ -1,9 +1,26 @@
 .index-container {
     margin-top: auto;
-}
-
-#index-options {
-    flex-direction: column;
+    display: flex;
+    justify-content: center;
     align-items: center;
 }
 
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 50px;
+  }
+  
+  th, td {
+    text-align: center;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  .index-topics {
+    background-color: #333;
+    color: white;
+  }
