@@ -23,6 +23,8 @@ const songSchema = new Schema ({
         type: String, 
         enum: ['pop', 'rock', 'edm', 'hip-hop', 'rap'],
     },
+    image:{ type: String, required: true
+    },
     comments: [commentSchema]
 
 }, { timestamps: true });

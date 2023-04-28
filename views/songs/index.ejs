@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <%- include('../partials/head') %>
-    <body>
+    <body id="body-box">
         <%- include('../partials/header') %>
             <div class="index-container">
                     <table>
@@ -10,13 +10,15 @@
                                     <th>Song</th>
                                     <th>Artist</th>
                                     <th>Genre</th>
+                                    <th>Comments:
                                 </tr>
                         </thead>
                         <tbody id="index-options">
                             <% songs.forEach(s => { %>
                             <tr>
-                                <td>
-                                    <%= s.song %>
+                                <td id="song-titles">
+                                    <img class="song-cover" src="<%=s.image%>"/>
+                                    <div><%= s.song %></div>
                                 </td>
                                 <td>
                                     <%= s.artist %>
@@ -25,7 +27,7 @@
                                     <%= s.genre %>
                                 </td>
                                 <td>
-                                    <a href = "/songs/<%= s._id %>">Reviews</a>
+                                    <a class="button-comment" href = "/songs/<%= s._id %>">Comment</a>
                                 </td>
                             </tr>
                             <% }); %>

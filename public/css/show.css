@@ -38,26 +38,15 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
     grid-area: body;
-} */
+}
 
-.show-body td:nth-child(1) {
-    background-color: lightblue;
-    gap: 30px;
-  }
-  
-.show-body td:nth-child(2) {
-    background-color: lightgreen;
-  }
-  
-.show-body td:nth-child(3) {
-    background-color: lightpink;
-  }
-
-table {
+.music-info {
     width: 100%;
+    table-layout: auto;
     table-layout: fixed;
     justify-content: fixed;
 }
+
 
 .show-header th, 
 .show-body td {
@@ -93,6 +82,10 @@ table {
     margin-top: 10px;
 }
 
+.song-image{
+    width: 20vw;
+    height: 20vw; 
+}
 #show-comment-box textarea {
     border-radius: 50px;
     border: none;

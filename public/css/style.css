@@ -2,9 +2,21 @@
 @import url("new.css");
 @import url("show.css");
 
+body {
+    background-color: rgb(63, 213, 158);
+    font-size: 2vmin;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    margin:auto;
+}
+
 .navigator{
   overflow: hidden;
   background-color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .navigator a{
@@ -29,50 +41,6 @@
     text-align: center;
 }
 
-body {
-    background-color: rgb(63, 213, 158);
-    font-size: 2vmin;
-    justify-content: center;
-    align-items: center;
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 0;
-}
-
-/* h1 {
-    color: black;
-}
-
-h2 {
-}
-
-h3 {
-    color: black
-}
-
-h4 {
-    color: black;
-} */
-
-/* head {
-    letter-spacing: 1vmin;
-    background-color: aqua;
-    text-align: center;
-}  */
-
-/* button {
-    margin-top: 3vmin;
-    font-size: 2vmin;
-    border: 0.06vmin solid black;
-    border-radius: 5vmin;
-    padding: 2.2vmin;
-    color: black;
-}
-
-button:hover {
-    background-color: black;
-    color: white;
-} */
-
 .login {
     display: flex;
     justify-content: center;
@@ -82,6 +50,12 @@ button:hover {
 
 .login img {
     height: 30px;
+    padding-top: 5px;
+}
+
+#proj-title{
+  min-height: 90%;
+  padding-bottom: 50%;
 }
 
 .comment-user {
@@ -95,21 +69,93 @@ button:hover {
     height: 30px;
 }
 
-/* .block-style-container {
-    position: fixed;
-    
-} */
+.song-cover {
+    width: 10vw;
+    height: 10vw; 
+    border-radius: 50%;
+}
+
+@keyframes spinning {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+ 
+.song-cover:hover {
+    animation-name: spinning;
+    animation-duration: 4s;
+    animation-iteration-count: infinite linear;
+    animation-timing-function: ease;
+     /* linear | ease | ease-in | ease-out | ease-in-out */
+}
+
+/* CSS */
+.button-comment {
+    appearance: button;
+    background-color: #268d7a;
+    background-image: none;
+    border: 1px solid #000;
+    border-radius: 4px;
+    box-shadow: #fff 4px 4px 0 0,#45a866 4px 4px 0 1px;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: ITCAvantGardeStd-Bk,Arial,sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    margin: 0 5px 10px 0;
+    overflow: visible;
+    padding: 12px 40px;
+    text-align: center;
+    text-transform: none;
+    touch-action: manipulation;
+    user-select: none;
+    -webkit-user-select: none;
+    vertical-align: middle;
+    white-space: nowrap;
+    text-decoration: none;
+  }
+  
+  .button-comment:focus {
+    text-decoration: none;
+  }
+  
+  .button-comment:hover {
+    text-decoration: none;
+  }
+  
+  .button-comment:active {
+    box-shadow: rgba(0, 0, 0, .125) 0 3px 5px inset;
+    outline: 0;
+  }
+  
+  .button-comment:not([disabled]):active {
+    box-shadow: #fff 2px 2px 0 0, #000 2px 2px 0 1px;
+    transform: translate(2px, 2px);
+  }
+  
+  @media (min-width: 768px) {
+    .button-comment {
+      padding: 12px 50px;
+    }
+  }
+
+#song-title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
 .footer {
-    position: fixed;
     font-size: 2vmin;
     text-align: center;
-    left: 0;
     bottom: 0;
     width: 100%;
     color: black;
-    /* padding-left: 50vmin;
-    padding-right: 50vmin;
-    padding-top: 35vmin;
-    padding-bottom: 5vmin; */
 }
