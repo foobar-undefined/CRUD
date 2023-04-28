@@ -3,7 +3,6 @@
     <%- include('../partials/head') %>
     <body>
         <%- include('../partials/header') %>
-
         <section>
             <div class="show-table-wrapper">
             <table>
@@ -24,7 +23,6 @@
             </table>
         </section>
         <section>
-            
             <% if (user) { %>
             <form action="/songs/<%= song._id %>/comments" method="POST">
                 <label>

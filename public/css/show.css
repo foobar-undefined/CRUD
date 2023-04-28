@@ -144,6 +144,7 @@ table {
     bottom: 34vmin;
     right: 20vmin;
     border-radius: 2vmin 25vmin 2vmin 20vmin;
+    display: flex;
 } 
 
 .delete-button {
