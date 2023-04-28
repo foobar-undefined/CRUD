@@ -5,16 +5,17 @@
         <%- include('../partials/header') %>
 
         <section>
-            <table class ="muisc-info">
+            <div class="show-table-wrapper">
+            <table>
                 <thead>
-                    <tr>
+                    <tr class="show-header">
                         <th>Song</th>
                         <th>Artist</th>
                         <th>Genre</th>
                     </tr>
                 </thead>
-                <tbody>
-                    <tr>
+                    <tbody>
+                    <tr class="show-body">
                         <td><%= song.song %></td>
                         <td><%= song.artist %></td>
                         <td><%= song.genre %></td>
