@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../partials/head') %>
+    <body>
+        <%- include('../partials/header') %>
+        <section>
+            <div class="show-table-wrapper">
+            <table>
+                <thead>
+                    <tr class="show-header">
+                        <th>Song</th>
+                        <th>Artist</th>
+                        <th>Genre</th>
+                    </tr>
+                </thead>
+                    <tbody>
+                    <tr class="show-body">
+                        <td><%= song.song %></td>
+                        <td><%= song.artist %></td>
+                        <td><%= song.genre %></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section>
+            <% if (user) { %>
+            <form action="/songs/<%= song._id %>/comments" method="POST">
+                <label>
+                    <textarea name="title" id="show-comment-box" cols="30" rows="10" required></textarea>
+                </label> 
+                <br>
+                <input type="submit" value="Add Comment" class="show-add-comment-button">
+            </form>
+            <% } %>
+            <h3>Comments</h3>
+            <% song.comments.forEach(s => { %>
+                <div class="show-comment-container"></div>
+                <td class="show-comment-user"><img alt="avatar" src="<%= s.userAvatar %>" referrerpolicy="no-referrer" class="show-comment-user"><%= s.userName %></td>
+                <tr>
+                    <td><%= s.title %></td> 
+                    
+                    <td class="show-comment-options">
+                        <% if (user?._id.equals(s.user)) { %>
+                            <form action="/songs/<%= s._id %>/comments?_method=DELETE" method="POST">
+                                <button type="submit" class="delete-button">Delete Comment</button>
+                            </form>
+                            <a href="/comments/<%= s._id %>/edit"><button class="edit-button"> Edit Comment</button></a>                
+                            <% } %>
+                    </td>
+                </tr>
+            <% }) %>
+        </section>  
+        <%- include('../partials/footer') %>  
+</body>
+</html>

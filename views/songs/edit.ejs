@@ -1,0 +1,13 @@
+<%- include('../partials/head') %>
+<%- include('../partials/header') %>
+<main>
+
+            <form action="/songs/<%= commentToEdit._id %>/comments?_method=PUT" method="POST">
+                <p><strong><%= commentToEdit.title%></strong></p>
+                <%=commentToEdit.user.name%>
+                <textarea name="title" required><%= commentToEdit.title%></textarea>
+                <button type="submit">edit</button>
+            </form>
+</main>
+
+<%- include('../partials/footer') %>
