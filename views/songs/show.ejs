@@ -5,17 +5,15 @@
         <%- include('../partials/header') %>
 
         <section>
-            <div class="show-table-wrapper">
             <table>
-                <thead class="show-header">
+                <thead>
                     <tr>
                         <th>Song</th>
                         <th>Artist</th>
                         <th>Genre</th>
                     </tr>
                 </thead>
-                    <tbody class="show-body"></tbody>
-
+                <tbody>
                     <tr>
                         <td><%= song.song %></td>
                         <td><%= song.artist %></td>
@@ -23,10 +21,9 @@
                     </tr>
                 </tbody>
             </table>
-            </div>
         </section>
         <section>
-            <h3 id="show-comments-heading">Leave a comment below</h3>
+            <h3>Comments</h3>
             <% if (user) { %>
             <form action="/songs/<%= song._id %>/comments" method="POST">
                 <label>

@@ -2,6 +2,10 @@
 @import url("new.css");
 @import url("show.css");
 
+body {
+    margin: 0;
+
+}
 .navigator{
   overflow: hidden;
   background-color: #333;
@@ -38,41 +42,6 @@ body {
     margin: 0;
 }
 
-/* h1 {
-    color: black;
-}
-
-h2 {
-}
-
-h3 {
-    color: black
-}
-
-h4 {
-    color: black;
-} */
-
-/* head {
-    letter-spacing: 1vmin;
-    background-color: aqua;
-    text-align: center;
-}  */
-
-/* button {
-    margin-top: 3vmin;
-    font-size: 2vmin;
-    border: 0.06vmin solid black;
-    border-radius: 5vmin;
-    padding: 2.2vmin;
-    color: black;
-}
-
-button:hover {
-    background-color: black;
-    color: white;
-} */
-
 .login {
     display: flex;
     justify-content: center;
@@ -82,6 +51,7 @@ button:hover {
 
 .login img {
     height: 30px;
+    padding-top: 5px;
 }
 
 .comment-user {
@@ -95,10 +65,10 @@ button:hover {
     height: 30px;
 }
 
-/* .block-style-container {
-    position: fixed;
-    
-} */
+.song-cover {
+    width: 10vw;
+    height: 10vw;
+}
 
 .footer {
     position: fixed;
@@ -108,8 +78,4 @@ button:hover {
     bottom: 0;
     width: 100%;
     color: black;
-    /* padding-left: 50vmin;
-    padding-right: 50vmin;
-    padding-top: 35vmin;
-    padding-bottom: 5vmin; */
 }

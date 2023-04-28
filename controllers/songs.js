@@ -18,7 +18,7 @@ async function index(req, res){
         
     }catch(error){
         console.log(error)
-        res.render('error',{title: "Something went horribly wrong"});
+        res.render('error',{title: "Did you forget something?"});
     }
 }
 
