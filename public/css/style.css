@@ -67,14 +67,38 @@ body {
 
 .song-cover {
     width: 10vw;
-    height: 10vw;
+    height: 10vw; 
+    border-radius: 50%;
+}
+
+@keyframes spinning {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+ 
+.song-cover:hover {
+    animation-name: spinning;
+    animation-duration: 4s;
+    animation-iteration-count: infinite linear;
+    animation-timing-function: ease;
+     /* linear | ease | ease-in | ease-out | ease-in-out */
+  }
+
+#song-title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .footer {
-    position: fixed;
+    position: relative;
     font-size: 2vmin;
     text-align: center;
-    left: 0;
     bottom: 0;
     width: 100%;
     color: black;

@@ -16,11 +16,9 @@
                         <tbody id="index-options">
                             <% songs.forEach(s => { %>
                             <tr>
-                                <td>
+                                <td id="song-titles">
                                     <img class="song-cover" src="<%=s.image%>"/>
-                                </td>
-                                <td>
-                                    <%= s.song %>
+                                    <div><%= s.song %></div>
                                 </td>
                                 <td>
                                     <%= s.artist %>
@@ -29,7 +27,7 @@
                                     <%= s.genre %>
                                 </td>
                                 <td>
-                                    <a href = "/songs/<%= s._id %>">Comments</a>
+                                    <a id="button-comment" href = "/songs/<%= s._id %>"><button> Comment</button></a>
                                 </td>
                             </tr>
                             <% }); %>
