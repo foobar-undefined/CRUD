@@ -41,7 +41,7 @@ table {
 }
 
 #show-comment-box {
-    position: absolute;
+    position: relative;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -49,12 +49,13 @@ table {
     flex-direction: column;
     align-items: center;
     background-color: orange;
-    border: 2px solid black;
-    border-radius: 2vmin;
-    padding: 2vmin;
+    border: 2px solid white;
+    border-radius: 3vmin;
     width: 40vmin;
-    min-height: 10vmin;
-    margin-top: 20vmin;
+    height: 10vmin;
+    min-height: 5vmin;
+    margin-top: 10vmin;
+    padding-top: 1vmin;
 }
 
 #show-comment-box label {
@@ -71,9 +72,16 @@ table {
     height: 150px;
     resize: none;
     font-size: 20px;
+    margin-bottom: 10px;
 }
-/* table {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 10px;
-} */
+
+.show-comment-user {
+    margin-top: 10px;
+}
+
+.show-add-comment-button {
+    position: absolute;
+    bottom: 37vmin;
+    right: 25vmin;
+    border-radius: 2vmin 25vmin 2vmin 20vmin;
+}
