@@ -14,8 +14,10 @@ body {
 .navigator{
   overflow: hidden;
   background-color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
-
 
 .navigator a{
     float: left;
@@ -49,6 +51,11 @@ body {
 .login img {
     height: 30px;
     padding-top: 5px;
+}
+
+#proj-title{
+  min-height: 90%;
+  padding-bottom: 50%;
 }
 
 .comment-user {
@@ -138,7 +145,6 @@ body {
     }
   }
 
-
 #song-title{
     display: flex;
     flex-direction: column;
@@ -147,7 +153,6 @@ body {
 }
 
 .footer {
-    position: relative;
     font-size: 2vmin;
     text-align: center;
     bottom: 0;
