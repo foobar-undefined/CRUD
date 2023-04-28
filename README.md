@@ -12,12 +12,24 @@ User have a collections of songs to view. User's can sign in to their account to
 
 <img src="imgs/add_song_page-2nd_720.png" width="500px">
 
+
 ## Try the website here:
 
+# Wireframe & ERD: 
+
+Wireframe
+
+<img src="imgs/wireframe.png" width="500px">
+
+ERD
+
+<img src="imgs/ERD.png" width="500px">
 
 # Team members
 ## Jessica
 ## Michael
+
+# Wireframe:
 
 
 ## MVP Goals:
