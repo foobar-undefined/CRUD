@@ -15,7 +15,7 @@ User have a collections of songs to view. User's can sign in to their account to
 
 ## Try the website here:
 
-# Wireframe & ERD: 
+## Wireframe & ERD: 
 
 Wireframe
 
@@ -28,8 +28,6 @@ ERD
 # Team members
 ## Jessica
 ## Michael
-
-# Wireframe:
 
 
 ## MVP Goals:
