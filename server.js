@@ -55,6 +55,6 @@ app.use('*', (req, res) => {
 });
 
 //Listen on port 3000 for HTTP request from clients
-app.listen(rocess.env.PORT || 3000, () => {
+app.listen(process.env.PORT || 3000, () => {
     console.log('Listening on port 3000');
 });

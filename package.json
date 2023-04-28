@@ -13,6 +13,9 @@
     "override": "^0.0.1",
     "passport": "^0.6.0",
     "passport-google-oauth": "^2.0.0",
-    "session": "^0.1.0"
+    "session": "^0.1.0",
+    "scripts": {
+      "starts": "node server.js"
+    }
   }
 }
