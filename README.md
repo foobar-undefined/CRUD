@@ -27,10 +27,10 @@ ERD
 
 <img src="imgs/ERD.png" width="500px">
 
-# Team members
+# Team members & Trello:
 ## Jessica
 ## Michael
-
+https://trello.com/b/QuiDcRis/project-2
 
 ## MVP Goals:
 Add songs to the database. Allow users to leave a comment on any song. Edit and delete their own comments.
